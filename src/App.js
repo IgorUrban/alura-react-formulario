@@ -16,7 +16,6 @@ function App() {
   
 }
 
-
 function aoEnviarFormulario(dados){
   console.log(dados);
 }
