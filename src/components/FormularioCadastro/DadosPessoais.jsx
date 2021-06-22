@@ -12,7 +12,7 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        aoEnviar();
+        aoEnviar({ nome, sobrenome, cpf, promocoes, novidades });
       }}
     >
       <TextField
@@ -56,6 +56,10 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
       />
 
       <FormControlLabel
+        value={promocoes}
+        onChange={(event) => {
+          setPromocoes(event.target.value);
+        }}
         label="Promoções"
         control={
           <Switch
@@ -70,6 +74,10 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
       />
 
       <FormControlLabel
+        value={novidades}
+        onChange={(event) => {
+          setNovidades(event.target.value);
+        }}
         label="Novidades"
         control={
           <Switch
