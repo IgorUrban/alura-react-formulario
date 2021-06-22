@@ -12,7 +12,7 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        aoEnviar({ nome, sobrenome, cpf, promocoes, novidades });
+        aoEnviar();
       }}
     >
       <TextField
@@ -84,7 +84,7 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
       />
 
       <Button type="submit" variant="contained" color="primary">
-        Cadastrar
+        Próximo
       </Button>
     </form>
   );
